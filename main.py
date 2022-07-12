@@ -4,7 +4,7 @@ app = flask.Flask(__name__)
 
 
 title='flask-frozen test'
-name1 = 'Taro'
+name1 = 'page2'
 name2 = 'Jiro'
 
 @app.route('/')
@@ -16,10 +16,10 @@ def index():
     	name2=name2
     	)
 
-@app.route('/pages/<page_name>.html', methods=['GET'])
+@app.route('/<page_name>.html', methods=['GET'])
 def hello_function(page_name):
     return flask.render_template(
-    	'/pages/%s.html' %page_name, 
+    	'/%s.html' %page_name, 
     	title=title, 
     	name0=page_name,
     	)
