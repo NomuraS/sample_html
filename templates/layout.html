@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <title>Legal Summarizer</title> -->
+    <title>{{ title }}</title>
+    <!--juuyou -->
+    <link rel='stylesheet' href="{{url_for('static', filename='css/bootstrap.css')}}" />
+    <link rel='stylesheet' href="{{url_for('static', filename='css/font-awesome.css')}}" />
+    <link rel='stylesheet' href="{{url_for('static', filename='css/main.css')}}" />
+    <link rel='stylesheet' href="{{url_for('static', filename='css/default.css')}}" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="{{url_for('static', filename='js/bootstrap.js')}}"></script>
+    <!-- <link rel='stylesheet' id='bootstrap-css' href='https://wp-themes.com/wp-content/themes/job-portal/assets/css/bootstrap.css' type='text/css' media='' /> -->
+    <!-- <link rel='stylesheet' id='font-awesome-css' href='https://wp-themes.com/wp-content/themes/job-portal/assets/css/font-awesome.css' type='text/css' media='' /> -->
+    <!-- <link rel='stylesheet' id='job-portal-main-css' href='https://wp-themes.com/wp-content/themes/job-portal/assets/css/main.css' type='text/css' media='' /> -->
+    <!-- <link rel='stylesheet' id='job-portal-default-css' href='https://wp-themes.com/wp-content/themes/job-portal/assets/css/default.css' type='text/css' media='' /> -->
+    <!-- <script type='text/javascript' src='https://wp-themes.com/wp-content/themes/job-portal/assets/js/bootstrap.js'></script> -->
+</head>
+
+<body class="home blog">
+    <div id="wrapper">
+    <!--main-section start-->
+    <section id="home-page" class="main-section">
+        <div class="image-overlay">
+            <!---- Start box-toper ---->
+            <header>
+                <div class="header-top">
+                    <div class="container">
+                        <!-- Menu -->
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12">
+                                <div class="logoSite">
+                                    <a href="{{url_for('index')}}" rel="home" class="logoSite-brand">
+                                        MLET.II test page
+                                        <!-- <span class="logoSite-brand-subline">Bacis usage of an automated manipulation of a web-brawser.</span> -->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Menu End -->
+                    </div>
+                </div>
+            </header>
+            <!---- box-toper End ---->
+            <!-- browse job section start-->
+            <div class="browse-jobs">
+                <div class="container">
+                    <div class="browse-jobs-wrapper">
+                        <div class="row">
+                            <div class="filter-category">
+                                        {% block content %}
+                                        {% endblock %}        
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </div>
+
+    <footer class="footer-copyrights">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <p class="copyright-text"><a href="https://www.amifiable.co.jp/">Amifiable Inc.</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+

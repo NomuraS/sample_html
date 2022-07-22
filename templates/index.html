@@ -1,0 +1,63 @@
+
+
+{% extends "layout.html" %}
+{% block content %}
+<script>
+    function OnButtonClick() {
+        target = document.getElementById("output");
+        target.innerHTML = "クリック完了！";
+      }
+</script>
+
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+    <!-- <h3>Text Box</h3> -->
+    <h2 class="class_h2">Text Box</h2>
+<input type="text" class="form-control" name="text_name">
+
+    <!-- <h2 class="class_h2">Examples</h2> -->
+    <h2 class="class_h2">Radio button</h2>
+    <form class="" action="/example" method="POST">
+            <input type="radio" name="example_check_list" value="example1"> example1 <br>
+            <input type="radio" name="example_check_list" value="example2"> example2 <br>
+            <input type="radio" name="example_check_list" value="example3"> example3<br>
+    </form>
+    <!-- <h3>Check Box</h3> -->
+    <h2 class="class_h2">Check Box</h2>
+    <fieldset>
+        <div>
+            <input type="checkbox" name="hoge" checked>
+            <label for="scales">チェック1</label>
+        </div>
+        <div>
+            <input type="checkbox" name="piyo">
+            <label for="horns">チェック2</label>
+        </div>
+    </fieldset>
+
+        <!-- <h2 class="class_h2">Pull Down</h2> -->
+        <h2 class="class_h2">Pull Down</h2>
+
+        <select name="pulldown_name">
+            <option>選択1</option>
+            <option>選択2</option>
+            <option>選択3</option>
+        </select>
+</div>
+
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+    <!-- <h2 class="class_h2">Text Area</h2> -->
+    <h2 class="class_h2">Text Area</h2>
+    <textarea class="form-control" rows="8" name="summary"> {{uploaded_files}} </textarea>
+
+    <!-- <h2 class="class_h2">Button</h2> -->
+    <h2 class="class_h2">Button</h2>
+    <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="OnButtonClick();" >ButtonExample</button>
+<br />
+<div id="output"></div>
+
+    <h2 class="class_h2">Link</h2>
+Click link >>> <a href="{{url_for('hello_function', page_name=name1)}}">link_{{ name1 }}</a>
+
+</div>
+
+{% endblock %}
